@@ -19,6 +19,19 @@ spec:
           name: go-myapp
           ports:
             - containerPort: 8080
+          env:
+            - name: POD
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+            - name: NODE
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
           resources:
             requests:
               memory: "64Mi"
