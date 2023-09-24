@@ -1,14 +1,21 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: go-myapp
+  name: td2311-myapp
 spec:
   maxReplicas: 10
   minReplicas: 3
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: go-myapp
+    name: td2311-myapp
+  metrics:
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: 60
   behavior:
     scaleDown:
       stabilizationWindowSeconds: 30

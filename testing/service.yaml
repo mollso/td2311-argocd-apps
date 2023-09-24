@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: td2311-myapp
+  name: td2311-myapp
+spec:
+  selector:
+    app: td2311-myapp
+  type: NodePort

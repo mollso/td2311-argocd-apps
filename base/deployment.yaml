@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: go-myapp
-  name: go-myapp
+    app: td2311-myapp
+  name: td2311-myapp
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: go-myapp
+      app: td2311-myapp
   template:
     metadata:
       labels:
-        app: go-myapp
+        app: td2311-myapp
     spec:
       containers:
-        - image: ghcr.io/ci7rix/go-myapp:latest
-          name: go-myapp
+        - image: ghcr.io/mollso/td2311-myapp:latest
+          name: td2311-myapp
           ports:
             - containerPort: 8080
           env:
@@ -35,7 +35,5 @@ spec:
           resources:
             requests:
               memory: "64Mi"
-              cpu: "250m"
             limits:
-              memory: "1Gi"
-              cpu: "500m"
+              memory: "1200Mi"
