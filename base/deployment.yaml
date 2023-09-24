@@ -5,7 +5,6 @@ metadata:
     app: td2311-myapp
   name: td2311-myapp
 spec:
-  replicas: 3
   selector:
     matchLabels:
       app: td2311-myapp
