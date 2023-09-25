@@ -3,4 +3,3 @@ kind: Kustomization
 resources:
 - autoscale.yaml
 - deployment.yaml
-- service.yaml
