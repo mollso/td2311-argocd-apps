@@ -14,7 +14,7 @@ spec:
         app: td2311-myapp
     spec:
       containers:
-        - image: ghcr.io/mollso/td2311-myapp:main
+        - image: ghcr.io/mollso/td2311-myapp:sha-b9d7e9e
           name: td2311-myapp
           resources:
             requests:
